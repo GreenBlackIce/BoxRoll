@@ -11,6 +11,7 @@ public class PlayerMovment : MonoBehaviour
 
     public float forwardMovmentspeedGrowth;
 
+    public bool hasHitObject = false;
     // Update is called once per frame
     void Update()
     {
@@ -25,6 +26,6 @@ public class PlayerMovment : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider) 
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        hasHitObject = true;
     }
 }
