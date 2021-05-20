@@ -738,8 +738,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 322787813}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 30}
-  m_LocalScale: {x: 5, y: 30, z: 5}
+  m_LocalPosition: {x: 0, y: 0, z: 68}
+  m_LocalScale: {x: 5, y: 70, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -2696,7 +2696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnrate: 7
-  cubePrefab: {fileID: 1679689746925511920, guid: 0e7eeaffdc5fc1a4384f380000259050, type: 3}
+  ringPrefab: {fileID: 6247480978280067737, guid: 211c858a84fa16b4ea62dac2c8fe31a7, type: 3}
   playerMovmentSpeed: 7
 --- !u!4 &1708064409
 Transform:
@@ -3001,7 +3001,7 @@ SphereCollider:
   m_GameObject: {fileID: 1948902630}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}

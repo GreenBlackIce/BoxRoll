@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CubeScript : MonoBehaviour
+public class RingScript : MonoBehaviour
 {
     // Update is called once per frame
     void Update()
