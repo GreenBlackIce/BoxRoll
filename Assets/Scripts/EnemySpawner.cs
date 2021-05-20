@@ -17,7 +17,7 @@ public class EnemySpawner : MonoBehaviour
     {
         for(float i = 0f; i < 15f; i++)
         {
-            GameObject ring = Instantiate(ringPrefab,Vector3.forward * (( i* 10) + 10f), Quaternion.identity);
+            GameObject ring = Instantiate(ringPrefab,Vector3.forward * (( i* 10) + 20f), Quaternion.identity);
             if(randomFloat == -1f)
             {
                 randomFloat = Random.Range(-45f, 45f);
@@ -35,10 +35,10 @@ public class EnemySpawner : MonoBehaviour
     {
         if(Time.time >= nextSpawnTime)
         {
-            GameObject ring = Instantiate(ringPrefab, (Vector3.forward * 160f) + (Vector3.forward * playerMovmentSpeed * nextSpawnTime), Quaternion.identity);
+            GameObject ring = Instantiate(ringPrefab, (Vector3.forward * 170f) + (Vector3.forward * playerMovmentSpeed * nextSpawnTime * 1.90f), Quaternion.identity);
             randomFloat = Random.Range(randomFloat - 90f, randomFloat + 90f);
             ring.transform.RotateAround(Vector3.zero, Vector3.back, randomFloat);
-            nextSpawnTime = Time.time + 13f / spawnrate;
+            nextSpawnTime = Time.time + 6f / spawnrate;
         }
     }
 }

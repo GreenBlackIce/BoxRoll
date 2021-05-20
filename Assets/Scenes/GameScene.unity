@@ -666,7 +666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d44823e0dcc0e149887062dc897b6d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  growRate: 7
+  player: {fileID: 1948902630}
 --- !u!136 &322787815
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1696,7 +1696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movmentSideSpeed: 100
   currentSideMovment: 0
-  forwardMovmentspeedGrowth: 7
+  forwardMovmentspeedGrowth: 13
   hasHitObject: 0
 --- !u!114 &963194230
 MonoBehaviour:
@@ -2974,7 +2974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movmentSideSpeed: 100
   currentSideMovment: 0
-  forwardMovmentspeedGrowth: 7
+  forwardMovmentspeedGrowth: 13
   hasHitObject: 0
 --- !u!54 &1948902632
 Rigidbody:
