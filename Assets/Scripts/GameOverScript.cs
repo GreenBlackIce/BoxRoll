@@ -19,7 +19,7 @@ public class GameOverScript : MonoBehaviour
     public void retryGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);   
     }
 
 

@@ -30,15 +30,16 @@ public class EnemySpawner : MonoBehaviour
             ring.transform.RotateAround(Vector3.zero, Vector3.back, randomFloat);
 
         }
+        nextSpawnTime = 0f;
     }
     void Update()
     {
-        if(Time.time >= nextSpawnTime)
+        if(Time.timeSinceLevelLoad >= nextSpawnTime)
         {
             GameObject ring = Instantiate(ringPrefab, (Vector3.forward * 170f) + (Vector3.forward * playerMovmentSpeed * nextSpawnTime * 1.90f), Quaternion.identity);
             randomFloat = Random.Range(randomFloat - 90f, randomFloat + 90f);
             ring.transform.RotateAround(Vector3.zero, Vector3.back, randomFloat);
-            nextSpawnTime = Time.time + 6f / spawnrate;
+            nextSpawnTime = Time.timeSinceLevelLoad + 6f / spawnrate;
         }
     }
 }
