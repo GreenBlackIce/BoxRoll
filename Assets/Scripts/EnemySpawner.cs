@@ -34,12 +34,13 @@ public class EnemySpawner : MonoBehaviour
     }
     void Update()
     {
-        if(Time.timeSinceLevelLoad >= nextSpawnTime)
+        float adjustedTimeSinceLevelLoad = Time.timeSinceLevelLoad - 2.8f;
+        if(adjustedTimeSinceLevelLoad >= nextSpawnTime)
         {
             GameObject ring = Instantiate(ringPrefab, (Vector3.forward * 170f) + (Vector3.forward * playerMovmentSpeed * nextSpawnTime * 1.90f), Quaternion.identity);
             randomFloat = Random.Range(randomFloat - 90f, randomFloat + 90f);
             ring.transform.RotateAround(Vector3.zero, Vector3.back, randomFloat);
-            nextSpawnTime = Time.timeSinceLevelLoad + 6f / spawnrate;
+            nextSpawnTime = adjustedTimeSinceLevelLoad + 6f / spawnrate;
         }
     }
 }

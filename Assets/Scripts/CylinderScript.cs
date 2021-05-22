@@ -10,6 +10,9 @@ public class CylinderScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(0, 0, player.transform.position.z + 67f);
+        if(Time.timeSinceLevelLoad >= 3f)
+        {
+            transform.position = new Vector3(0, 0, player.transform.position.z + 67f);
+        }
     }
 }

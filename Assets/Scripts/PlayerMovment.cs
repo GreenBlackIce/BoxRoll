@@ -20,8 +20,11 @@ public class PlayerMovment : MonoBehaviour
 
     private void FixedUpdate() 
     {
-        transform.RotateAround(Vector3.zero, Vector3.back, movmentSideSpeed * currentSideMovment * Time.fixedDeltaTime);
-        transform.position = transform.position + (Vector3.forward * forwardMovmentspeedGrowth * Time.deltaTime);
+        if(Time.timeSinceLevelLoad >= 3f)
+        {
+            transform.RotateAround(Vector3.zero, Vector3.back, movmentSideSpeed * currentSideMovment * Time.fixedDeltaTime);
+            transform.position = transform.position + (Vector3.forward * forwardMovmentspeedGrowth * Time.deltaTime);
+        }
     }
 
     private void OnTriggerEnter(Collider collider) 

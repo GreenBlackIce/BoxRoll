@@ -15,7 +15,7 @@ public class ObserverScript : MonoBehaviour
         {
             Time.timeScale = 0f;
             scoreBoardUI.SetActive(false);
-            gameOverUI.SetActive(true); 
+            gameOverUI.SetActive(true);
             player.hasHitObject = false;
         } 
     }
